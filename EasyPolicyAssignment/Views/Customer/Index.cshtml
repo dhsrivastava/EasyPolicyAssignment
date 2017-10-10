@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Easy Policty Assignment";
+}
+
+<h2>Easy Policy Assignment</h2>
+
+<div class="form-horizontal">
+    <h4>Customer Discount</h4>
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Total Bill: </label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" id="txtTotalBill" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Customer Type: </label>
+        <div class="col-md-10 dropdown">
+            <select class="form-control" id="ddlCustomerType">
+                <option value="N">Normal</option>
+                <option value="E">Employee</option>
+                <option value="A">Affliated</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Customer Association: </label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" id="txtCustomerAssociation" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Is Groceries Item: </label>
+        <div class="col-md-10">
+            <input type="checkbox" id="chkGroceries">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="btnSubmit" value="Calculate Net Amount" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/customerDiscount.js"></script>
+<script>
+    $("#btnSubmit").on('click', custDisc.CalculateNetPayment);
+    
+</script>
